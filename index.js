@@ -20,6 +20,10 @@ server.get("/api", (req, res) => {
   res.json({ message: "Web 45 is awesome!" });
 });
 
+server.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
+
 server.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
