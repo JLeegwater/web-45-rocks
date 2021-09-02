@@ -22,6 +22,6 @@ server.get("/api", (req, res) => {
   res.json({ message: "Web 45 is awesome!" });
 });
 
-server.listen(3000, () => {
+server.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
